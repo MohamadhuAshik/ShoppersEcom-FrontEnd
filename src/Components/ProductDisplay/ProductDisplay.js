@@ -6,7 +6,7 @@ import { ShopContext } from "../../Context/ShopContext";
 
 const ProductDisplay = (props) => {
   const { product } = props;
-  const {addToCart} = useContext(ShopContext)
+  const { addToCart } = useContext(ShopContext)
   return (
     <div className="productdisplay">
       <div className="productdisplay-left">
@@ -23,32 +23,32 @@ const ProductDisplay = (props) => {
       <div className="productdisplay-right">
         <h1>{product.name}</h1>
         <div className="productdisplay-right-stars">
-           <img src={star_icon} alt="pic"/>
-           <img src={star_icon} alt="pic"/>
-           <img src={star_icon} alt="pic"/>
-           <img src={star_icon} alt="pic"/>
-           <img src={star_dull_icon} alt="pic"/>
-           <p>(122)</p>
+          <img src={star_icon} alt="pic" />
+          <img src={star_icon} alt="pic" />
+          <img src={star_icon} alt="pic" />
+          <img src={star_icon} alt="pic" />
+          <img src={star_dull_icon} alt="pic" />
+          <p>(122)</p>
         </div>
         <div className="productdisplay-right-prices">
-            <div className="productdisplay-right-price-old">${product.old_price}</div>
-            <div className="productdisplay-right-price-new">${product.new_price}</div>
+          <div className="productdisplay-right-price-old">${product.old_price}</div>
+          <div className="productdisplay-right-price-new">${product.new_price}</div>
         </div>
         <div className="productdisplay-right-description">
-         A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment
+          A lightweight, compact, paperback or hardcover book, easy to hold and read, with a simple design and soft cover. Suitable for carrying around, either as a casual read or for study.
         </div>
         <div className="productdisplay-right-size">
-           <h1>Select Size</h1>
-           <div className="productdisplay-right-sizes">
-            <div>S</div>
-            <div>M</div>
-            <div>L</div>
-            <div>XL</div>
-            <div>XXL</div>
-           </div>
+          <h1>Select Language</h1>
+          <div className="productdisplay-right-sizes">
+            <div>Tamil</div>
+            <div>English</div>
+            <div>Hindi</div>
+            {/* <div>XL</div>
+            <div>XXL</div> */}
+          </div>
         </div>
-        <button onClick={()=>addToCart(product.id)}>ADD TO CART</button>
-        <p className="productdisplay-right-category"><span>Category :</span>Women , T-Shirt, Crop Top</p>
+        <button onClick={() => addToCart(product.id)}>ADD TO CART</button>
+        <p className="productdisplay-right-category"><span>Category :</span>Tamil , E-books, novels</p>
         <p className="productdisplay-right-category"><span>Tags :</span>Modern, Latest</p>
       </div>
     </div>

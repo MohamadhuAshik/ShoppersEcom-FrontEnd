@@ -7,9 +7,12 @@ import Product from "./Pages/Product";
 import Cart from "./Pages/Cart";
 import LoginSignup from "./Pages/LoginSignup";
 import Footer from "./Components/Footer/Footer";
-import men_banner from "./Components/Assets/banner_mens.png";
-import women_banner from "./Components/Assets/banner_women.png";
-import kid_banner from "./Components/Assets/banner_kids.png";
+// import men_banner from "./Components/Assets/banner_mens.png";
+import men_banner from "./Components/Assets/tamilNavelBanner.jpg";
+// import women_banner from "./Components/Assets/banner_women.png";
+import women_banner from "./Components/Assets/englishLiteratures.jpg";
+// import kid_banner from "./Components/Assets/banner_kids.png";
+import kid_banner from "./Components/Assets/kidsCommicBanner.jpg";
 
 function App() {
   return (
@@ -18,15 +21,15 @@ function App() {
       <Routes>
         <Route path="/" element={<Shop />} />
         <Route
-          path="/mens"
+          path="/tamil"
           element={<ShopCategory banner={men_banner} category="men" />}
         />
         <Route
-          path="/womens"
+          path="/english"
           element={<ShopCategory banner={women_banner} category="women" />}
         />
         <Route
-          path="/kids"
+          path="/commics"
           element={<ShopCategory banner={kid_banner} category="kid" />}
         />
         <Route path="product" element={<Product />}>

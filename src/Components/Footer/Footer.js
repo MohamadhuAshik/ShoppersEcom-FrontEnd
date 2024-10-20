@@ -8,32 +8,33 @@ import Whatsapp_icon from '../Assets/whatsapp_icon.png'
 const Footer = () => {
   return (
     <div className='footer'>
-     <div className='footer-logo'>
-        <img src={footer_logo} alt='pic'/>
-        <p>SHOPPER</p>
-     </div>
-     <ul className='footer-links'>
+      <div className='footer-logo'>
+        <img src={footer_logo} alt='pic' />
+        {/* <p>SHOPPER</p> */}
+        <p>PAGEDRIFT</p>
+      </div>
+      <ul className='footer-links'>
         <li>Company</li>
         <li>Products</li>
         <li>Offices</li>
         <li>About</li>
         <li>Contact</li>
-     </ul>
-     <div className='footer-social-icon'>
+      </ul>
+      <div className='footer-social-icon'>
         <div className='footer-icons-container'>
-            <img src={instagram_icon} alt='pic'/>
+          <img src={instagram_icon} alt='pic' />
         </div>
         <div className='footer-icons-container'>
-            <img src={pintester_icon} alt='pic'/>
+          <img src={pintester_icon} alt='pic' />
         </div>
         <div className='footer-icons-container'>
-            <img src={Whatsapp_icon} alt='pic'/>
+          <img src={Whatsapp_icon} alt='pic' />
         </div>
-     </div>
-     <div className='footer-copyright'>
-      <hr/>
-      <p>Copyright @ 2023 - All Right Reserved</p>
-     </div>
+      </div>
+      <div className='footer-copyright'>
+        <hr />
+        <p>Copyright @ 2023 - All Right Reserved</p>
+      </div>
     </div>
   )
 }

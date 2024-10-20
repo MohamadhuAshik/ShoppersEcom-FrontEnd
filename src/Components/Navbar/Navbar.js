@@ -2,7 +2,7 @@ import React, { useContext, useRef, useState } from "react";
 import "./Navbar.css";
 import logo from "../Assets/logo.png";
 import cart_icon from "../Assets/cart_icon.png";
-import { Link,useNavigate} from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ShopContext } from "../../Context/ShopContext";
 import nav_drowdown from "../Assets/nav_dripdown.jpg";
 
@@ -14,12 +14,13 @@ const Navbar = () => {
     menuRef.current.classList.toggle("nav-menu-visible");
     e.target.classList.toggle("open");
   };
-  const navigate= useNavigate()
+  const navigate = useNavigate()
   return (
     <div className="navbar">
       <div className="nav-logo">
         <img src={logo} alt="pic" />
-        <p>SHOPPER</p>
+        {/* <p>SHOPPER</p> */}
+        <p>PAGEDRIFT</p>
       </div>
       <img
         className="nav-dropdown"
@@ -34,39 +35,39 @@ const Navbar = () => {
           }}
         >
           <Link style={{ textDecoration: "none" }} to="/">
-            Shop
+            Books
           </Link>
           {menu === "shop" ? <hr /> : <></>}
         </li>
         <li
           onClick={() => {
-            setMenu("mens");
+            setMenu("tamil");
           }}
         >
-          <Link style={{ textDecoration: "none" }} to="/mens">
-            Men
+          <Link style={{ textDecoration: "none" }} to="/tamil">
+            Tamil
           </Link>
-          {menu === "mens" ? <hr /> : <></>}
+          {menu === "tamil" ? <hr /> : <></>}
         </li>
         <li
           onClick={() => {
-            setMenu("womens");
+            setMenu("english");
           }}
         >
-          <Link style={{ textDecoration: "none" }} to="/womens">
-            Women
+          <Link style={{ textDecoration: "none" }} to="/english">
+            English Navels
           </Link>
-          {menu === "womens" ? <hr /> : <></>}
+          {menu === "english" ? <hr /> : <></>}
         </li>
         <li
           onClick={() => {
-            setMenu("kids");
+            setMenu("commics");
           }}
         >
-          <Link style={{ textDecoration: "none" }} to="/kids">
-            Kids
+          <Link style={{ textDecoration: "none" }} to="/commics">
+            Commics
           </Link>{" "}
-          {menu === "kids" ? <hr /> : <></>}
+          {menu === "commics" ? <hr /> : <></>}
         </li>
       </ul>
       <div className="nav-login-cart">
